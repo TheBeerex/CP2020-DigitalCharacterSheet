@@ -11,7 +11,7 @@ using namespace std;
 
 //Utility to read an Edgerunner save
 Edgerunner* readSave(string fileName){
-    Edgerunner* myCyberpunk = new Edgerunner();
+    Edgerunner* theCyberpunk = new Edgerunner();
     ifstream theFile;
 
     theFile.open(fileName);
@@ -23,115 +23,115 @@ Edgerunner* readSave(string fileName){
         //Handle
     foundIndex = 0;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;;
-    myCyberpunk->setHandle(inputLine.substr(foundIndex,foundLength));
+    theCyberpunk->setHandle(inputLine.substr(foundIndex,foundLength));
         //Role
     foundIndex = foundLength+1;
     foundLength = inputLine.find(",", foundIndex) - foundIndex;
-    myCyberpunk->setRole(inputLine.substr(foundIndex, foundLength));
+    theCyberpunk->setRole(inputLine.substr(foundIndex, foundLength));
         //Age
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setAge(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setAge(stoi(inputLine.substr(foundIndex, foundLength)));
         //DamageTaken
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setDamageTaken(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setDamageTaken(stoi(inputLine.substr(foundIndex, foundLength)));
         //INT
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setINT(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setINT(stoi(inputLine.substr(foundIndex, foundLength)));
         //REF
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setREF(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setREF(stoi(inputLine.substr(foundIndex, foundLength)));
         //TECH
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setTECH(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setTECH(stoi(inputLine.substr(foundIndex, foundLength)));
         //COOL
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setCOOL(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setCOOL(stoi(inputLine.substr(foundIndex, foundLength)));
         //ATTR
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setATTR(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setATTR(stoi(inputLine.substr(foundIndex, foundLength)));
         //LUCK
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setLUCK(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setLUCK(stoi(inputLine.substr(foundIndex, foundLength)));
         //MOVE
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setMOVE(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setMOVE(stoi(inputLine.substr(foundIndex, foundLength)));
         //BOD
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setBOD(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setBOD(stoi(inputLine.substr(foundIndex, foundLength)));
         //EMP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setEMP(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setEMP(stoi(inputLine.substr(foundIndex, foundLength)));
         //REP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setReputation(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setReputation(stoi(inputLine.substr(foundIndex, foundLength)));
         //HUMANITY
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setHumanity(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setHumanity(stoi(inputLine.substr(foundIndex, foundLength)));
         //IMPROVE POINTS
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setImprovePoints(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setImprovePoints(stoi(inputLine.substr(foundIndex, foundLength)));
         //RUN
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setRun(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setRun(stoi(inputLine.substr(foundIndex, foundLength)));
         //LEAP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setLeap(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setLeap(stoi(inputLine.substr(foundIndex, foundLength)));
         //CARRY
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setCarry(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setCarry(stoi(inputLine.substr(foundIndex, foundLength)));
         //LIFT
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setLift(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setLift(stoi(inputLine.substr(foundIndex, foundLength)));
         //BODY SAVE
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setBodySave(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setBodySave(stoi(inputLine.substr(foundIndex, foundLength)));
         //BTM
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setBodyDamageMod(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setBodyDamageMod(stoi(inputLine.substr(foundIndex, foundLength)));
         //HEAD SP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setHeadSP(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setHeadSP(stoi(inputLine.substr(foundIndex, foundLength)));
         //TORSO SP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setTorsoSP(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setTorsoSP(stoi(inputLine.substr(foundIndex, foundLength)));
         //RIGHT ARM SP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setRightArmSP(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setRightArmSP(stoi(inputLine.substr(foundIndex, foundLength)));
         //LEFT ARM SP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setLeftArmSP(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setLeftArmSP(stoi(inputLine.substr(foundIndex, foundLength)));
         //RIGHT LEG SP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setRightLegSP(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setRightLegSP(stoi(inputLine.substr(foundIndex, foundLength)));
         //LEFT LEG SP
     foundIndex = foundIndex+foundLength+1;
     foundLength = inputLine.find(",",foundIndex) - foundIndex;
-    myCyberpunk->setLeftLegSP(stoi(inputLine.substr(foundIndex, foundLength)));
+    theCyberpunk->setLeftLegSP(stoi(inputLine.substr(foundIndex, foundLength)));
 
 
         //SKILLS
@@ -146,10 +146,10 @@ Edgerunner* readSave(string fileName){
         foundIndex = foundIndex+foundLength+1;
         foundLength = inputLine.find(",",foundIndex) - foundIndex;
         skillMod = stoi(inputLine.substr(foundIndex, foundLength));
-        if(myCyberpunk->hasSkill(skillName)){
-            myCyberpunk->modifySkill(skillName,skillMod);
+        if(theCyberpunk->hasSkill(skillName)){
+            theCyberpunk->modifySkill(skillName,skillMod);
         }else{
-            myCyberpunk->addSkill(skillName, skillMod);
+            theCyberpunk->addSkill(skillName, skillMod);
         }
         getline(theFile,inputLine);
     }
@@ -166,59 +166,59 @@ Edgerunner* readSave(string fileName){
         foundIndex = foundIndex+foundLength+1;
         foundLength = inputLine.find(",",foundIndex) - foundIndex;
         itemCount = stoi(inputLine.substr(foundIndex, foundLength));
-        myCyberpunk->addItem(itemName, itemCount);
+        theCyberpunk->addItem(itemName, itemCount);
         getline(theFile,inputLine);
     }
 
     theFile.close();
-    return myCyberpunk;
+    return theCyberpunk;
 }
 //Utility to write an Edgerunner save
-void writeSave(string fileName, Edgerunner* myCyberpunk){
+void writeSave(string fileName, Edgerunner* theCyberpunk){
     ofstream theFile;
     theFile.open(fileName);
 
-    theFile << myCyberpunk->getHandle() << ",";
-    theFile << myCyberpunk->getRole() << ",";
-    theFile << myCyberpunk->getAge() << ",";
-    theFile << myCyberpunk->getDamageTaken() << ",";
+    theFile << theCyberpunk->getHandle() << ",";
+    theFile << theCyberpunk->getRole() << ",";
+    theFile << theCyberpunk->getAge() << ",";
+    theFile << theCyberpunk->getDamageTaken() << ",";
 
-    theFile << myCyberpunk->getINT() << ",";
-    theFile << myCyberpunk->getREF() << ",";
-    theFile << myCyberpunk->getTECH() << ",";
-    theFile << myCyberpunk->getCOOL() << ",";
-    theFile << myCyberpunk->getATTR() << ",";
-    theFile << myCyberpunk->getLUCK() << ",";
-    theFile << myCyberpunk->getMOVE() << ",";
-    theFile << myCyberpunk->getBOD() << ",";
-    theFile << myCyberpunk->getEMP() << ",";
+    theFile << theCyberpunk->getINT() << ",";
+    theFile << theCyberpunk->getREF() << ",";
+    theFile << theCyberpunk->getTECH() << ",";
+    theFile << theCyberpunk->getCOOL() << ",";
+    theFile << theCyberpunk->getATTR() << ",";
+    theFile << theCyberpunk->getLUCK() << ",";
+    theFile << theCyberpunk->getMOVE() << ",";
+    theFile << theCyberpunk->getBOD() << ",";
+    theFile << theCyberpunk->getEMP() << ",";
 
-    theFile << myCyberpunk->getReputation() << ",";
-    theFile << myCyberpunk->getHumanity() << ",";
-    theFile << myCyberpunk->getImprovePoints() << ",";
-    theFile << myCyberpunk->getRun() << ",";
-    theFile << myCyberpunk->getLeap() << ",";
-    theFile << myCyberpunk->getCarry() << ",";
-    theFile << myCyberpunk->getLift() << ",";
-    theFile << myCyberpunk->getBodySave() << ",";
-    theFile << myCyberpunk->getBodyDamageMod() << ",";
+    theFile << theCyberpunk->getReputation() << ",";
+    theFile << theCyberpunk->getHumanity() << ",";
+    theFile << theCyberpunk->getImprovePoints() << ",";
+    theFile << theCyberpunk->getRun() << ",";
+    theFile << theCyberpunk->getLeap() << ",";
+    theFile << theCyberpunk->getCarry() << ",";
+    theFile << theCyberpunk->getLift() << ",";
+    theFile << theCyberpunk->getBodySave() << ",";
+    theFile << theCyberpunk->getBodyDamageMod() << ",";
 
-    theFile << myCyberpunk->getHeadSP() << ",";
-    theFile << myCyberpunk->getTorsoSP() << ",";
-    theFile << myCyberpunk->getRightArmSP() << ",";
-    theFile << myCyberpunk->getLeftArmSP() << ",";
-    theFile << myCyberpunk->getRightLegSP() << ",";
-    theFile << myCyberpunk->getLeftLegSP() << "\n";
+    theFile << theCyberpunk->getHeadSP() << ",";
+    theFile << theCyberpunk->getTorsoSP() << ",";
+    theFile << theCyberpunk->getRightArmSP() << ",";
+    theFile << theCyberpunk->getLeftArmSP() << ",";
+    theFile << theCyberpunk->getRightLegSP() << ",";
+    theFile << theCyberpunk->getLeftLegSP() << "\n";
 
     theFile << "SKILLS: \n";
-    Skill* currentSkill = myCyberpunk->getFirstSkill();
+    Skill* currentSkill = theCyberpunk->getFirstSkill();
     while(currentSkill != NULL){
         theFile << currentSkill->skill << "," << currentSkill->mod << "\n";
         currentSkill = currentSkill->next;
     }
 
     theFile << "INVENTORY: \n";
-    Item* currentItem = myCyberpunk->getFirstItem();
+    Item* currentItem = theCyberpunk->getFirstItem();
     while(currentItem != NULL){
         theFile << currentItem->item << "," << currentItem->count << "\n";
         currentItem = currentItem->next;
@@ -236,6 +236,7 @@ void Engine::printStatus(){
 Engine::Engine(){
     running = true;
     postLoad = false;
+    theCyberpunk = Edgerunner();
 }
 
 Engine::~Engine(){}
@@ -526,7 +527,7 @@ void Engine::getAndUseOptionInput(){
                 cout << endl << "   !!! Improper Input !!!" << endl;
             }
         }else if(option == 3){ // Modify stats        !!! TODO !!!
-
+            cout << endl << "Work in progress.";
         }else if(option == 4){ // See skill list
             Skill* currentSkill = theCyberpunk.getFirstSkill();
             while(currentSkill != NULL){
@@ -682,7 +683,118 @@ void Engine::getAndUseOptionInput(){
         }
     }else{
         if(option == 1){ // Create New Edgerunner      !!! TODO !!!
-            cout << endl << "Work in progress.";
+            cout << "What's the punk's name?    ";
+            getline(cin, input);
+            getline(cin,input);
+            theCyberpunk.setHandle(input);
+
+            cout << "What's the punk's role?    ";
+            getline(cin, input);
+            theCyberpunk.setRole(input);
+
+            cout << "What's the punk's age?    ";
+            getline(cin, input);
+            theCyberpunk.setAge(stoi(input));
+
+            cout << "What's their stats? Enter in the following format:" << endl << "[INT],[REF],[TECH],[COOL],[ATTR],[LUCK],[MA],[BOD],[EMP]" << endl;
+            getline(cin,input);
+            int foundIndex = 0, foundLength;
+                //INT
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setINT(stoi(input.substr(foundIndex, foundLength)));
+                //REF
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setREF(stoi(input.substr(foundIndex, foundLength)));
+                //TECH
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setTECH(stoi(input.substr(foundIndex, foundLength)));
+                //COOL
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setCOOL(stoi(input.substr(foundIndex, foundLength)));
+                //ATTR
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setATTR(stoi(input.substr(foundIndex, foundLength)));
+                //LUCK
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setLUCK(stoi(input.substr(foundIndex, foundLength)));
+                //MOVE
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setMOVE(stoi(input.substr(foundIndex, foundLength)));
+                //BOD
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setBOD(stoi(input.substr(foundIndex, foundLength)));
+                //EMP
+            foundIndex = foundIndex+foundLength+1;
+            theCyberpunk.setEMP(stoi(input));
+
+            theCyberpunk.setRun(theCyberpunk.getMOVE()*3);
+            theCyberpunk.setLeap(floor(theCyberpunk.getRun()/4));
+            theCyberpunk.setCarry(theCyberpunk.getBOD()*10);
+            theCyberpunk.setLift(theCyberpunk.getBOD()*40);
+            theCyberpunk.setBodySave(theCyberpunk.getBOD());
+            if (theCyberpunk.getBOD() == 2)
+                theCyberpunk.setBodyDamageMod(0);
+            else if(theCyberpunk.getBOD() == 3 || theCyberpunk.getBOD() == 4)
+                theCyberpunk.setBodyDamageMod(-1);
+            else if (theCyberpunk.getBOD() == 5 || theCyberpunk.getBOD() == 7 || theCyberpunk.getBOD() == 7)
+                theCyberpunk.setBodyDamageMod(-2);
+            else if (theCyberpunk.getBOD() == 8 || theCyberpunk.getBOD() == 9)
+                theCyberpunk.setBodyDamageMod(-3);
+            else if (theCyberpunk.getBOD() == 10)
+                theCyberpunk.setBodyDamageMod(-4);
+            else if (theCyberpunk.getBOD() >= 11)
+                theCyberpunk.setBodyDamageMod(-5);
+
+            cout << "What's the punk's rep?    ";
+            getline(cin, input);
+            theCyberpunk.setReputation(stoi(input));
+
+            cout << "What's the punk's humanity?    ";
+            getline(cin, input);
+            theCyberpunk.setHumanity(stoi(input));
+
+            cout << "How many improvement points do they have?    ";
+            getline(cin, input);
+            theCyberpunk.setImprovePoints(stoi(input));
+
+            cout << "What's their armor looking like? Format their SP as follows:" << endl << "[HEAD],[TORSO],[R.ARM],[L.ARM],[R.LEG],[L.LEG]" << endl;
+            getline(cin,input);
+            foundIndex = 0;
+                //HEAD
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setHeadSP(stoi(input.substr(foundIndex, foundLength)));
+                //TORSO
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setTorsoSP(stoi(input.substr(foundIndex, foundLength)));
+                //R ARM
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setRightArmSP(stoi(input.substr(foundIndex, foundLength)));
+                //L ARM
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setLeftArmSP(stoi(input.substr(foundIndex, foundLength)));
+                //R LEG
+            foundIndex = foundIndex+foundLength+1;
+            foundLength = input.find(",",foundIndex) - foundIndex;
+            theCyberpunk.setRightLegSP(stoi(input.substr(foundIndex, foundLength)));
+                //L LEG
+            foundIndex = foundIndex+foundLength+1;
+            theCyberpunk.setLeftLegSP(stoi(input.substr(foundIndex)));
+            
+            theCyberpunk.setDamageTaken(0);
+
+            saveEdgerunner();
+
+            postLoad = 1;
         }else if(option == 2){ // Load Edgerunner
             cout << endl << "What's their handle?    ";
             cin >> input;
