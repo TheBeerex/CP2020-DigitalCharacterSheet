@@ -1,5 +1,5 @@
 # CP2020-DigitalCharacterSheet
-A framework and command line driver for creating and managing a Cyberpunk 2020 character. A WIP project.
+A framework and command line driver for creating and managing a Cyberpunk 2020 character. No longer working on project at this time.
 
 To Do:
 1. Engine.cpp : Modify Stats option (line 528)
